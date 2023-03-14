@@ -6,5 +6,20 @@ public class Lecturer {
     private String rank;
     private Project projectLed;
 
+    public boolean leadProject(Project p) {
+        if ((projectLed == null) && (p.getLeader() == null)) {
+            projectLed = p;
+            p.setLeader(this);
+            return true;
+        }
+        return false;
+    }
 
+    public void joinProject(Project p) {
+        p.addMember(this);
+    }
+
+    public String toString() {
+        return String.format("Name: %s\nRank: %s", name, rank);
+    }
 }
