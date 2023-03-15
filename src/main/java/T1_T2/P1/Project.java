@@ -1,4 +1,4 @@
-package T1.P1;
+package T1_T2.P1;
 
 import java.util.ArrayList;
 import java.util.Currency;
@@ -6,13 +6,13 @@ import java.util.Currency;
 public class Project {
     private String name;
     private Currency budget;
-    private ArrayList<Lecturer> members;
+    private ArrayList<Object> members;
     private Lecturer leader;
 
     public Project(String name, Currency budget) {
         this.name = name;
         this.budget = budget;
-        this.members = new ArrayList<Lecturer>();
+        this.members = new ArrayList<Object>();
     }
 
 
@@ -24,13 +24,13 @@ public class Project {
         this.leader = leader;
     }
 
-    public void addMember(Lecturer members) {
-        this.members.add(members);
+    public void displayMembers() {
+        for (Object member : members) {
+            System.out.println(member.toString());
+        }
     }
 
-    public void displayMembers() {
-        for (Lecturer member : members) {
-            System.out.println(member);
-        }
+    public void addMembers(Object member) {
+        this.members.add(member);
     }
 }

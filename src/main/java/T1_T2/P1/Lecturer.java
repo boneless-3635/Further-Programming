@@ -1,4 +1,4 @@
-package T1.P1;
+package T1_T2.P1;
 
 public class Lecturer {
     private String employeeId;
@@ -16,7 +16,7 @@ public class Lecturer {
     }
 
     public void joinProject(Project p) {
-        p.addMember(this);
+        p.addMembers(this);
     }
 
     public String toString() {
