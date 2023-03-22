@@ -1,10 +1,11 @@
 package T1_T2.P1;
 
-public class Lecturer {
+public class Lecturer implements CanJoinProject{
     private String employeeId;
     private String name;
     private String rank;
     private Project projectLed;
+    private String profile;
 
     public boolean leadProject(Project p) {
         if ((projectLed == null) && (p.getLeader() == null)) {
@@ -21,5 +22,15 @@ public class Lecturer {
 
     public String toString() {
         return String.format("Name: %s\nRank: %s", name, rank);
+    }
+
+    @Override
+    public void setProfile(String profile) {
+        this.profile = profile;
+    }
+
+    @Override
+    public String getProfile() {
+        return this.profile;
     }
 }

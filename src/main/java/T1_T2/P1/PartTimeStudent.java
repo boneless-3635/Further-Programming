@@ -12,9 +12,10 @@ public class PartTimeStudent extends Student{
         studentPTCount += 1;
     }
 
+    @Override
     public String toString() {
-        return String.format("%s\nMinimum Hours: %.2f\nMaximum Hours: %.2f",
-                super.toString(), minHours, maxHours);
+        return String.format("Student ID: %s\nFull Name: %s\nMajor: %s\nPart Time Student\nMinimum Hours: %.2f\nMaximum Hours: %.2f",
+                studentId, name, major, minHours, maxHours);
     }
 
     public static int count() {

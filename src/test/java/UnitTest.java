@@ -1,3 +1,4 @@
+import T1_T2.P1.FullTimeStudent;
 import T1_T2.P1.PartTimeStudent;
 import T1_T2.P1.Student;
 import org.junit.jupiter.api.Test;
@@ -6,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class UnitTest {
     @Test
     public void testSameStudent() {
-        Student s1 = new Student("s001", "John", "Business");
-        Student s2 = new Student("s00", "John", "Business");
+        Student s1 = new FullTimeStudent("s001", "John", "Business");
+        Student s2 = new FullTimeStudent("s00", "John", "Business");
         s2.studentId = s2.studentId + "1";
-        assertEquals(true, s1.equals(s2));
+        assertEquals(s1, s2);
     }
 
     @Test

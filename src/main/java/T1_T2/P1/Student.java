@@ -5,7 +5,7 @@ package T1_T2.P1;
  * @version 1.0
  */
 
-public class Student {
+public abstract class Student {
     /**
      * Student attributes
      */
@@ -19,14 +19,8 @@ public class Student {
         this.major = major;
     }
 
-
-
-
     @Override
-    public String toString() {
-        return String.format("Student ID: %s\nFull Name: %s\nMajor: %s", studentId, name, major);
-    }
-
+    public abstract String toString();
     @Override
     public boolean equals(Object s) {
         if (s == this) {
