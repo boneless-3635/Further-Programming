@@ -1,18 +1,20 @@
 package T1_T2.P1;
 
-import java.util.ArrayList;
-import java.util.Currency;
+import java.util.*;
 
 public class Project {
     private String name;
     private Currency budget;
-    private ArrayList<CanJoinProject> members;
+    private List<CanJoinProject> members;
     private Lecturer leader;
+    private static Map<String, List<Project>> projectMemberMap;
+
 
     public Project(String name, Currency budget) {
         this.name = name;
         this.budget = budget;
         this.members = new ArrayList<CanJoinProject>();
+        projectMemberMap = new HashMap<String, List<Project>>();
     }
 
     public Lecturer getLeader() {
@@ -21,6 +23,7 @@ public class Project {
 
     public void setLeader(Lecturer leader) {
         this.leader = leader;
+        LeaderSet.addLeaderSet(leader);
     }
 
     public void displayMembers() {
